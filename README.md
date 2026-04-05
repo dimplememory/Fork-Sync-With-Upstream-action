@@ -30,14 +30,15 @@ Configure the action with a branch on your `target` repo - the one you want to u
 
 ### Input Variables
 
-| Name                       |     Required?      | Default | Example                                  |
-| -------------------------- | :----------------: | ------- | ---------------------------------------- |
-| target_sync_branch         | :white_check_mark: |         | 'master', 'main', 'my-branch'            |
-| target_repo_token          | :white_check_mark: |         | ${{ secrets.GITHUB_TOKEN }}              |
-| upstream_repo_access_token |                    |         | ${{ secrets.NAME_OF_TOKEN }}             |
-| upstream_sync_repo         | :white_check_mark: |         | 'aormsby/Fork-Sync-With-Upstream-action' |
-| upstream_sync_branch       | :white_check_mark: |         | 'master', 'main', 'my-branch'            |
-| test_mode                  |                    | false   | true / false                             |
+| Name                       |     Required?      | Default      | Example                                  |
+| -------------------------- | :----------------: | ------------ | ---------------------------------------- |
+| target_host_domain         |                    | 'github.com' | 'codeberg.org'                           |
+| target_sync_branch         | :white_check_mark: |              | 'master', 'main', 'my-branch'            |
+| target_repo_token          | :white_check_mark: |              | ${{ secrets.GITHUB_TOKEN }}              |
+| upstream_repo_access_token |                    |              | ${{ secrets.NAME_OF_TOKEN }}             |
+| upstream_sync_repo         | :white_check_mark: |              | 'aormsby/Fork-Sync-With-Upstream-action' |
+| upstream_sync_branch       | :white_check_mark: |              | 'master', 'main', 'my-branch'            |
+| test_mode                  |                    |     false    | true / false                             |
 
 **Always** set `target_repo_token` to `${{ secrets.GITHUB_TOKEN }}` so the action can push to your target repo.
 
